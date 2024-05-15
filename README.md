@@ -1,6 +1,6 @@
 # Summarizer using Azure Open AI
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/reidav/aca-dapr-openai-workshop?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/azuredevmuc/aca-dapr-openai-workshop?quickstart=1)
 
 Hands-on-guide : [https://aka.ms/aca-dapr-workshop](https://aka.ms/aca-dapr-workshop)
 
