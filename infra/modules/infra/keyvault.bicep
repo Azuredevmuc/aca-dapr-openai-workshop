@@ -25,12 +25,12 @@ param openAiApiEndpoint string
 //    RESOURCES
 // ------------------
 
-resource keyVaultUserAssignedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+resource keyVaultUserAssignedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-07-31-preview' = {
   name: keyVaultUserAssignedIdentityName
   location: location
 }
 
-resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
+resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
   name: keyVaultName
   location: location
   properties: {
@@ -77,7 +77,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
 //   }
 // }
 
-resource openAiApiKeySecret 'Microsoft.KeyVault/vaults/secrets@2022-07-01' = {
+resource openAiApiKeySecret 'Microsoft.KeyVault/vaults/secrets@2023-07-01' = {
   name: 'OPENAI-API-KEY'
   parent: keyVault
   properties: {
@@ -85,7 +85,7 @@ resource openAiApiKeySecret 'Microsoft.KeyVault/vaults/secrets@2022-07-01' = {
   }
 }
 
-resource openAiApiEndpointSecret 'Microsoft.KeyVault/vaults/secrets@2022-07-01' = {
+resource openAiApiEndpointSecret 'Microsoft.KeyVault/vaults/secrets@2023-07-01' = {
   name: 'OPENAI-API-ENDPOINT'
   parent: keyVault
   properties: {

@@ -14,10 +14,10 @@ param containerAppsEnvironmentName string
 @secure()
 param serviceBusConnectionString string
 
-resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' existing = {
+resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2023-11-02-preview' existing = {
   name: containerAppsEnvironmentName
 
-  resource daprComponent 'daprComponents@2022-03-01' = {
+  resource daprComponent 'daprComponents@2023-11-02-preview' = {
     name: daprComponentName
     properties: {
       componentType: 'pubsub.azure.servicebus'

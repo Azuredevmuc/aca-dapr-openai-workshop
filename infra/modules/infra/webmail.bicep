@@ -19,7 +19,7 @@ param location string = resourceGroup().location
 //    RESOURCES
 // ------------------
 
-resource containerApp 'Microsoft.App/containerApps@2023-11-02-preview' = {
+resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
   name: containerAppName
   location: location
   properties: {

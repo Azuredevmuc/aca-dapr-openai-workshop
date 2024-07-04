@@ -17,7 +17,7 @@ var containerRegistryPullRoleGuid = '7f951dda-4ed3-4680-a7ca-43fe172d538d'
 //    RESOURCES
 // ------------------
 
-resource containerRegistry 'Microsoft.ContainerRegistry/registries@2022-12-01' = {
+resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
   name: containerRegistryName
   location: location
   sku: {
@@ -28,12 +28,12 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2022-12-01' =
   }
 }
 
-resource containerRegistryUserAssignedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+resource containerRegistryUserAssignedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-07-31-preview' = {
   name: containerRegistryUserAssignedIdentityName
   location: location
 }
 
-resource containerRegistryRoleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
+resource containerRegistryRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   name: guid(subscription().id, containerRegistryName, containerRegistryUserAssignedIdentityName) 
   scope: containerRegistry
   properties: {

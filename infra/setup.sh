@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-export RESOURCE_GROUP=rg-dev-swn-linksummarizer
+export RESOURCE_GROUP=rg-ai-demo-summarizer
 export WORKLOAD_NAME=summarizer
 export ENVIRONMENT=dev
-export UNIQUE_ID=01
+export UNIQUE_ID=07
 
 # Create Resource Group
 # Check the availability of the OpenAI gpt-4, 0613 model in your region:
 # https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#standard-deployment-model-availability
-az group create --name $RESOURCE_GROUP --location australiaeast
+az group create --name $RESOURCE_GROUP --location swedencentral
 
 # Deploy Container Apps Environment and its prerequisites
 echo "Deploying Container Apps Environment and its prerequisites to $RESOURCE_GROUP..."

@@ -12,7 +12,8 @@ param location string
 //    RESOURCES
 // ------------------
 
-resource serviceBus 'Microsoft.ServiceBus/namespaces@2021-06-01-preview' = {
+@description('Servicebus namespace resource.')
+resource serviceBus 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' = {
   name: serviceBusName
   location: location
   sku: {
